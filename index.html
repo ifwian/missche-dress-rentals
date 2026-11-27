@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f8f5f0">
+    <meta name="description" content="Discover occasion-worthy dresses to rent from Missche. Find your look and send a rental inquiry.">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' fill='%23f8f5f0'/%3E%3Ctext x='7' y='29' font-family='Georgia,serif' font-size='29' fill='%23b96745'%3Em.%3C/text%3E%3C/svg%3E">
+    <title>Missche — A little more occasion</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="wordmark" href="#home" aria-label="Missche home">missche<span>.</span></a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#collection">The collection</a>
+        <a href="#how-it-works">How it works</a>
+        <a href="#about">Our story</a>
+      </nav>
+      <div class="header-actions">
+        <button class="text-button owner-link" id="open-dashboard" type="button">Owner dashboard <span aria-hidden="true">↗</span></button>
+        <a class="button button-dark header-cta" href="#collection">Find your dress</a>
+      </div>
+    </header>
+
+    <main id="storefront">
+      <section class="hero" id="home">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-line"></span> A better kind of getting dressed</p>
+          <h1>For the days<br>that deserve <em>a dress.</em></h1>
+          <p class="hero-description">The big entrance, the champagne toast, the just-because Saturday. Find a dress you love, rent it for the moment, and let it have another life.</p>
+          <div class="hero-actions">
+            <a class="button button-dark" href="#collection">Explore the collection <span aria-hidden="true">→</span></a>
+            <a class="quiet-link" href="#how-it-works">How renting works</a>
+          </div>
+          <div class="hero-note"><span class="note-star" aria-hidden="true">✳</span><span>Little-worn finds. Big-night energy.</span></div>
+        </div>
+        <div class="hero-visual">
+          <img src="https://images.unsplash.com/photo-1539008835657-9e8e9680c956?auto=format&fit=crop&w=1100&q=85" alt="Woman wearing an elegant occasion dress">
+          <div class="image-note"><span>THE OCCASION EDIT</span><strong>Made for your moment.</strong></div>
+          <span class="visual-index" aria-hidden="true">01 / 04</span>
+        </div>
+        <div class="hero-side-note" aria-hidden="true">DRESS UP, PASS IT ON&nbsp; · &nbsp;DRESS UP, PASS IT ON&nbsp; · &nbsp;</div>
+      </section>
+
+      <section class="collection section-wrap" id="collection">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Good things to wear</p>
+            <h2>Meet your <em>plus-one.</em></h2>
+          </div>
+          <a class="quiet-link" href="#booking">Have something in mind? <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="category-row" aria-label="Dress categories">
+          <button class="category-chip active" type="button" data-filter="all" aria-pressed="true">All dresses</button>
+          <button class="category-chip" type="button" data-filter="Wedding guest" aria-pressed="false">Wedding guest</button>
+          <button class="category-chip" type="button" data-filter="Party" aria-pressed="false">Party</button>
+          <button class="category-chip" type="button" data-filter="Black tie" aria-pressed="false">Black tie</button>
+        </div>
+        <div class="dress-grid" id="dress-grid" aria-live="polite"></div>
+      </section>
+
+      <section class="how-section" id="how-it-works">
+        <div class="how-image">
+          <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1100&q=85" alt="A fashion look for a special occasion" loading="lazy">
+          <span class="image-caption">A little less wardrobe. A lot more wow.</span>
+        </div>
+        <div class="how-copy">
+          <p class="eyebrow">Easy as getting ready</p>
+          <h2>Three steps.<br><em>One great entrance.</em></h2>
+          <ol class="steps-list">
+            <li><span>01</span><div><strong>Find your feeling</strong><p>Browse our handpicked dresses and fall for the one that feels like you.</p></div></li>
+            <li><span>02</span><div><strong>Tell us your date</strong><p>Send an inquiry with your occasion and dates for the shop owner to review.</p></div></li>
+            <li><span>03</span><div><strong>Make it a moment</strong><p>Wear it, love it, return it. Then let someone else have their moment, too.</p></div></li>
+          </ol>
+          <a class="button button-outline" href="#collection">Browse dresses <span aria-hidden="true">→</span></a>
+        </div>
+      </section>
+
+      <section class="booking-section section-wrap" id="booking">
+        <div class="booking-intro">
+          <p class="eyebrow">Already picturing it?</p>
+          <h2>Let’s get you<br><em>out the door.</em></h2>
+          <p>Send a no-pressure inquiry with your date and favorite dress so the shop owner can review your request.</p>
+          <p class="booking-aside">Your plans can change. This inquiry doesn’t lock you in.</p>
+        </div>
+        <form class="booking-form" id="booking-form">
+          <div class="form-row">
+            <label>Your name<input name="name" autocomplete="name" placeholder="How should we call you?" required maxlength="80"></label>
+            <label>Email address<input name="email" type="email" autocomplete="email" placeholder="you@example.com" required maxlength="120"></label>
+          </div>
+          <div class="form-row">
+            <label>Dress you love<select name="dress" id="dress-select" required><option value="">Choose a dress</option></select></label>
+            <label>Occasion date<input name="date" type="date" required></label>
+          </div>
+          <label>A little more about your plans <span class="optional">(optional)</span><textarea name="message" rows="3" placeholder="Occasion, sizing questions, anything you'd like us to know…" maxlength="500"></textarea></label>
+          <button class="button button-dark form-submit" type="submit">Send rental inquiry <span aria-hidden="true">→</span></button>
+          <p class="form-message" id="form-message" role="status" aria-live="polite"></p>
+          <p class="privacy-note">Your details stay on this device for this demo. No payment is taken here.</p>
+        </form>
+      </section>
+
+      <section class="about-strip" id="about">
+        <p class="eyebrow">Wear it well. Pass it on.</p>
+        <h2>More moments.<br><em>Less standing in front of your wardrobe.</em></h2>
+        <p>Missche makes special-occasion dressing feel a little more thoughtful. A carefully chosen dress gets to be part of more than one story — and yours gets to be entirely your own.</p>
+        <a class="quiet-link" href="#collection">Find a dress for your next story <span aria-hidden="true">→</span></a>
+      </section>
+    </main>
+
+    <main id="dashboard" class="dashboard-view" hidden>
+      <section class="dashboard-shell">
+        <div class="dashboard-top">
+          <div><p class="eyebrow">Missche / owner space</p><h1>Your little <em>empire.</em></h1><p class="dashboard-lead">A snapshot of your dresses and rental inquiries.</p></div>
+          <button class="button button-outline" id="back-to-store" type="button">← Back to storefront</button>
+        </div>
+        <div class="dashboard-notice"><span aria-hidden="true">ⓘ</span> Demo dashboard — information is saved only in this browser and is not protected by a login.</div>
+        <div class="stats-grid">
+          <article class="stat-card"><span>In the collection</span><strong id="stat-dresses">0</strong><small>Listed dresses</small></article>
+          <article class="stat-card"><span>Ready to wear</span><strong id="stat-available">0</strong><small>Marked available</small></article>
+          <article class="stat-card"><span>New inquiries</span><strong id="stat-pending">0</strong><small>Waiting for a reply</small></article>
+          <article class="stat-card"><span>All inquiries</span><strong id="stat-total">0</strong><small>Saved on this device</small></article>
+        </div>
+        <section class="dashboard-panel">
+          <div class="panel-heading"><div><p class="eyebrow">Your inbox</p><h2>Rental inquiries</h2></div><span class="panel-count" id="inquiry-count">0 inquiries</span></div>
+          <div id="inquiry-list" class="inquiry-list"></div>
+        </section>
+        <section class="dashboard-panel inventory-panel">
+          <div class="panel-heading"><div><p class="eyebrow">Your edit</p><h2>Dress availability</h2></div><span class="panel-count">Toggle to update the storefront</span></div>
+          <div id="inventory-list" class="inventory-list"></div>
+        </section>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="wordmark" href="#home">missche<span>.</span></a>
+      <p>For more moments, and the memories after.</p>
+      <span>© <span id="year"></span> Missche Dress Rentals</span>
+    </footer>
+  </body>
+</html>
