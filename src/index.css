@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+/* Design system: change colours, fonts, radius and shadows here only. */
+@theme {
+  --color-blush: #efe8df;
+  --color-rose-dusty: #d8cdc2;
+  --color-ivory: #faf7f2;
+  --color-rose: #7b3a4a;
+  --color-rose-deep: #5e2a37;
+  --color-charcoal: #1f1b1c;
+  --color-muted: #6a605f;
+
+  --font-display: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --font-sans: "Manrope", ui-sans-serif, system-ui, "Segoe UI", sans-serif;
+
+  --radius-card: 0.25rem;
+  --shadow-soft: 0 1px 0 rgb(31 27 28 / 0.04);
+  --shadow-lift: 0 24px 48px -28px rgb(31 27 28 / 0.45);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+  body {
+    @apply bg-ivory font-sans text-charcoal antialiased;
+  }
+  h1, h2, h3 {
+    @apply font-display font-semibold leading-tight text-balance;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-rose);
+    outline-offset: 3px;
+  }
+}
+
+@utility container-page {
+  width: 100%;
+  max-width: 76rem;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+  @variant sm { padding-inline: 2rem; }
+}
